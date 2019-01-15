@@ -34,6 +34,11 @@
             text="ToCamelCaseAction">
       <add-to-group group-id="EditMenu" anchor="last"/>
     </action>
+    <action id="com.Peredreev.CaseSwitcher.ToLowerCamelCaseAction"
+            class="com.Peredreev.CaseSwitcher.ToLowerCamelCaseAction" text="To camelCase"
+            description="Switch all instances of selected name to camelCase">
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </action>
   </actions>
 
 </idea-plugin>

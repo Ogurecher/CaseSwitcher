@@ -25,7 +25,7 @@ public abstract class SwitchCase extends AnAction {
 
         String newName = changeName(nameToAlter);
 
-        if (!newName.equals("")) {
+        if (!newName.equals(nameToAlter)) {
             replaceAllInstances(project, document, nameToAlter, newName);
         }
     }
@@ -61,5 +61,12 @@ public abstract class SwitchCase extends AnAction {
             text = document.getText();
             matcher = pattern.matcher(text);
         }
+    }
+
+    protected String removePrefix(String nameToAlter) {
+        while (!nameToAlter.matches("[A-Za-z].*")) {
+            nameToAlter = nameToAlter.substring(1);
+        }
+        return nameToAlter;
     }
 }

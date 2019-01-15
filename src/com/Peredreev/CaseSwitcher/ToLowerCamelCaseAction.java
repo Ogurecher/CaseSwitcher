@@ -1,8 +1,8 @@
 package com.Peredreev.CaseSwitcher;
 
-public class ToCamelCaseAction extends SwitchCase {
+public class ToLowerCamelCaseAction extends SwitchCase {
 
-    protected String changeName(String nameToAlter){
+    protected String changeName(String nameToAlter) {
 
         nameToAlter = removePrefix(nameToAlter);
 
@@ -18,6 +18,6 @@ public class ToCamelCaseAction extends SwitchCase {
             words[i] = words[i].substring(0, 1).toUpperCase() + lettersExceptFirst;
             newNameDraft += words[i];
         }
-        return newNameDraft;
+        return newNameDraft.substring(0, 1).toLowerCase() + newNameDraft.substring(1);
     }
 }
