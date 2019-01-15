@@ -2,55 +2,37 @@
   <id>com.Peredreev.CaseSwitcher</id>
   <name>CaseSwitcher</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="placeholder@mail.com" url="https://github.com/Ogurecher">Dmitrii Peredreev</vendor>
 
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
-    ]]></description>
+  <description> Plugin that allows to search current document for all instances of selected name and change it's notation </description>
 
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
-  </change-notes>
-
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
-
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+  <extensions defaultExtensionNs="com.intellij"></extensions>
 
   <actions>
-    <!-- Add your actions here -->
-    <action id="com.Peredreev.CaseSwitcher.ToCamelCaseAction" class="com.Peredreev.CaseSwitcher.ToCamelCaseAction"
-            text="ToCamelCaseAction">
+    <group id="CaseSwitcher.Group" text="CaseSwitcher"
+           description="Allows to switch case of all instances of selected name"
+           popup="true">
       <add-to-group group-id="EditMenu" anchor="last"/>
-    </action>
-    <action id="com.Peredreev.CaseSwitcher.ToLowerCamelCaseAction"
-            class="com.Peredreev.CaseSwitcher.ToLowerCamelCaseAction" text="To camelCase"
-            description="Switch all instances of selected name to camelCase">
-      <add-to-group group-id="EditMenu" anchor="last"/>
-    </action>
-    <action id="com.Peredreev.CaseSwitcher.ToSnakeCaseAction" class="com.Peredreev.CaseSwitcher.ToSnakeCaseAction"
-            text="To snake_case">
-      <add-to-group group-id="EditMenu" anchor="last"/>
-    </action>
-      <action id="com.Peredreev.CaseSwitcher.ToKebabCaseAction" class="com.Peredreev.CaseSwitcher.ToKebabCaseAction"
-              text="To kebab-case" description="To kebab-case">
-          <add-to-group group-id="EditMenu" anchor="last"/>
+      <!-- Add your actions here -->
+      <action id="com.Peredreev.CaseSwitcher.ToCamelCaseAction" class="com.Peredreev.CaseSwitcher.ToCamelCaseAction"
+              text="To CamelCase" description="Switch all instances of selected name to CamelCase">
       </action>
-    <action id="com.Peredreev.CaseSwitcher.ToUppercaseSnake" class="com.Peredreev.CaseSwitcher.ToUppercaseSnake"
-            text="To UPPERCASE_SNAKE" description="To UPPERCASE_SNAKE">
-      <add-to-group group-id="EditMenu" anchor="last"/>
-    </action>
+      <action id="com.Peredreev.CaseSwitcher.ToLowerCamelCaseAction"
+              class="com.Peredreev.CaseSwitcher.ToLowerCamelCaseAction" text="To camelCase"
+              description="Switch all instances of selected name to camelCase">
+      </action>
+      <action id="com.Peredreev.CaseSwitcher.ToSnakeCaseAction" class="com.Peredreev.CaseSwitcher.ToSnakeCaseAction"
+              text="To snake__case" description="Switch all instances of selected name to snake_case">
+      </action>
+      <action id="com.Peredreev.CaseSwitcher.ToUppercaseSnake" class="com.Peredreev.CaseSwitcher.ToUppercaseSnake"
+              text="To UPPERCASE__SNAKE" description="Switch all instances of selected name to UPPERCASE SNAKE">
+      </action>
+      <action id="com.Peredreev.CaseSwitcher.ToKebabCaseAction" class="com.Peredreev.CaseSwitcher.ToKebabCaseAction"
+              text="To kebab-case" description="Switch all instances of selected name to kebab-case">
+      </action>
+    </group>
   </actions>
 
 </idea-plugin>
