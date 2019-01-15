@@ -47,6 +47,10 @@
               text="To kebab-case" description="To kebab-case">
           <add-to-group group-id="EditMenu" anchor="last"/>
       </action>
+    <action id="com.Peredreev.CaseSwitcher.ToUppercaseSnake" class="com.Peredreev.CaseSwitcher.ToUppercaseSnake"
+            text="To UPPERCASE_SNAKE" description="To UPPERCASE_SNAKE">
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </action>
   </actions>
 
 </idea-plugin>
