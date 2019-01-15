@@ -43,6 +43,10 @@
             text="To snake_case">
       <add-to-group group-id="EditMenu" anchor="last"/>
     </action>
+      <action id="com.Peredreev.CaseSwitcher.ToKebabCaseAction" class="com.Peredreev.CaseSwitcher.ToKebabCaseAction"
+              text="To kebab-case" description="To kebab-case">
+          <add-to-group group-id="EditMenu" anchor="last"/>
+      </action>
   </actions>
 
 </idea-plugin>
