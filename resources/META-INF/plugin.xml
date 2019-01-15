@@ -4,7 +4,7 @@
   <version>1.0</version>
   <vendor email="placeholder@mail.com" url="https://github.com/Ogurecher">Dmitrii Peredreev</vendor>
 
-  <description> Plugin that allows to search current document for all instances of selected name and change it's notation </description>
+  <description> Plugin that allows to search current document for all instances of selected name and change its notation </description>
 
   <idea-version since-build="173.0"/>
 
